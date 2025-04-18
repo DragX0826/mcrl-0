@@ -1,3 +1,45 @@
+## README 摘要
+
+### 專案簡介
+這個專案旨在實現一個深度強化學習系統，專注於在類似 Minecraft 的環境中訓練機器人運動。使用程序生成技術創建複雜的 3D 環境，並利用強化學習算法來優化機器人的行為。
+
+### 主要功能
+- **程序化地形生成**：使用分形噪聲來生成隨機地形。
+- **物理模擬**：採用 PyBullet 進行物理模擬，確保機器人在環境中的運動真實。
+- **強化學習訓練**：利用 Stable Baselines3 進行 DRL 訓練。
+- **環境變化**：基於生物群落的變化來影響環境。
+- **並行訓練**：支持多個環境的並行訓練以提高效率。
+- **可視化工具**：使用 TensorBoard 進行訓練過程的可視化。
+
+### 技術棧
+- Python 3.8+
+- PyBullet
+- Stable Baselines3
+- NumPy
+- PyTorch
+- Gym
+- TensorBoard
+
+### 授權
+MIT 授權
+
+---
+
+## 未解的問題與解法
+
+### 問題1：環境穩定性
+- **描述**：在某些情況下，環境可能不穩定，導致訓練過程中出現異常行為。
+- **解法**：檢查物理參數設置，調整模擬步長，並增加環境重置的頻率。
+
+### 問題2：訓練速度慢
+- **描述**：在大規模環境中，訓練速度可能會變得非常緩慢。
+- **解法**：優化模型架構，使用更高效的算法，或增加硬體資源以加快計算速度。
+
+### 問題3：行為學習不佳
+- **描述**：機器人可能無法學習到有效的行為策略。
+- **解法**：調整獎勵函數，增加訓練樣本的多樣性，或使用不同的強化學習算法進行實驗。
+
+
 # Minecraft DRL Robot Training
 
 This project implements a Deep Reinforcement Learning (DRL) system for training robot locomotion in procedurally generated Minecraft-like environments. The system combines terrain generation, physics simulation, and reinforcement learning to train robots to navigate complex 3D environments.
@@ -86,27 +128,3 @@ This project is inspired by recent advances in:
 - Physics-based simulation
 - Deep reinforcement learning
 - Robot locomotion
-
-   
-這個專案實現了一個深度強化學習 (DRL) 系統,用於在程序生成的 Minecraft 類似環境中訓練機器人運動。該系統結合了地形生成、物理模擬和強化學習,以訓練機器人在複雜的 3D 環境中導航。
-
-### 主要功能點
-- 使用分形噪聲實現程序化地形生成
-- 基於生物群落的環境變化
-- 使用 PyBullet 進行基於物理的機器人模擬
-- 使用 Stable Baselines3 進行強化學習
-- 支持並行環境訓練
-- 使用 TensorBoard 進行訓練可視化
-
-### 技術棧
-- Python 3.8+
-- PyBullet
-- Stable Baselines3
-- NumPy
-- PyTorch
-- Gym
-- TensorBoard
-
-### 授權
-MIT 授權
-
